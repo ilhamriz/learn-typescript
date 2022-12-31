@@ -1,8 +1,13 @@
-const character = "ilham";
-console.log(character);
-const inputs = document.querySelectorAll("input");
-console.log(inputs);
+let character = "ilham";
+let age = 25;
+let isBlackBelt = false;
 
-inputs.forEach(input => {
-  console.log(input);
-})
+character = "rizky";
+age = 30;
+isBlackBelt = true;
+
+const circ = (diameter: number) => {
+  return diameter * Math.PI;
+}
+
+console.log(circ(8));
