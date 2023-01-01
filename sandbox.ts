@@ -1,37 +1,40 @@
+// EXPLICIT TYPES
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+// age = "luigi"
+age = 30;
+
+// isLoggedIn = 'mario'
+isLoggedIn = true;
+
 // ARRAY
-const names = ["luigi", "mario", "ramos"];
+let ages: number[];
+let ninjas: string[] = []; // use initialize so we can use .push
+ninjas.push("mario");
 
-names.push("joko");
-// names.push(9);
-// names[0] = 9;
+// UNION TYPES
+let mixed: (string | number | boolean)[] = [];
 
-const ages = [10, 20, 30];
+mixed.push("hello");
+mixed.push(20);
+mixed.push(false);
 
-ages.push(40);
-// ages.push("budi");
-// ages[0] = "budi";
+let uid: string | number;
 
-const mixed = ["luigi", 10, "mario", 20];
-
-mixed.push("ramos");
-mixed.push(30);
-mixed[0] = 9;
+uid = "123";
+uid = 123;
+// uid = false;
 
 // OBJECT
-let ninja = {
-  name: "luigi",
-  belt: "black",
-  age: 20,
+let ninjaOne: object;
+ninjaOne = { name: "mario", age: 20 };
+
+let ninjaTwo: {
+  name: string;
+  age: number;
+  beltColor: string;
 };
 
-ninja.name = "mario";
-ninja.age = 30;
-// ninja.age = "30";
-// ninja.skills = ["fighting", "sneaking"];
-
-ninja = {
-  name: "ramos",
-  belt: "purple",
-  age: 30,
-  // skills: ["fighting", "sneaking"],
-}
+ninjaTwo = { name: "mario", age: 20, beltColor: "black" };
