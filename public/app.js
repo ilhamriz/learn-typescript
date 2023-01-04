@@ -1,10 +1,16 @@
 "use strict";
 // CLASSES
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // public => default
+    // private => read and change inside the class
+    // readonly => only read inside or outside the class
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} owes $${this.amount} for ${this.details}`;
@@ -16,8 +22,6 @@ const invTwo = new Invoice('mario', 'testing mario', 400);
 const invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-invOne.client = "jancok";
-invTwo.amount = 1000;
 console.log(invoices);
 const form = document.querySelector('form');
 // console.log(form.children);

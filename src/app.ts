@@ -1,14 +1,18 @@
 // CLASSES
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+  // public => default
+	// private => read and change inside the class
+	// readonly => only read inside or outside the class
 
-  constructor(c: string, d: string, a: number) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
-  }
+  // readonly client: string;
+  // private details: string;
+  // public amount: number;
+
+  constructor(
+    readonly client: string,
+    private details: string,
+    public amount: number
+  ) {}
 
   format() {
     return `${this.client} owes $${this.amount} for ${this.details}`;
@@ -21,9 +25,6 @@ const invTwo = new Invoice('mario', 'testing mario', 400);
 const invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-
-invOne.client = "jancok";
-invTwo.amount = 1000;
 console.log(invoices);
 
 const form = document.querySelector('form') as HTMLFormElement;
