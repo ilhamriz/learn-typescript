@@ -1,8 +1,31 @@
-// const anchor = document.querySelector('a')!;
-// if (anchor) console.log(anchor.href);
-// console.log(anchor.href)
+// CLASSES
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
 
-// const form = document.querySelector('form')!;
+  constructor(c: string, d: string, a: number) {
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+
+  format() {
+    return `${this.client} owes $${this.amount} for ${this.details}`;
+  }
+};
+
+const invOne = new Invoice('yoshi', 'testing yoshi', 300);
+const invTwo = new Invoice('mario', 'testing mario', 400);
+
+const invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+
+invOne.client = "jancok";
+invTwo.amount = 1000;
+console.log(invoices);
+
 const form = document.querySelector('form') as HTMLFormElement;
 // console.log(form.children);
 
