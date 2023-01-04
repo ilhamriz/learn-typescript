@@ -8,3 +8,4 @@
 - Lesson-9  : Type Aliases
 - Lesson-10 : Function Signatures
 - Lesson-11 : The DOM & Type Casting
+- Lesson-12 : Classes
