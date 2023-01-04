@@ -9,3 +9,4 @@
 - Lesson-10 : Function Signatures
 - Lesson-11 : The DOM & Type Casting
 - Lesson-12 : Classes
+- Lesson-13 : Classes - Public, Private, Readonly
